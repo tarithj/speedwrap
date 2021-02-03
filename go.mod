@@ -1,4 +1,4 @@
-module github.com/tarihj/speedwrap
+module github.com/tarithj/speedwrap
 
 go 1.14
 
