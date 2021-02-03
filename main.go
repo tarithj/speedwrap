@@ -1,13 +1,12 @@
-package main
+package speedwrap
 
 import (
 	"math"
 	"time"
 )
 
-
 type SW struct {
-	bytes int64
+	bytes     int64
 	startTime time.Time
 }
 
@@ -23,7 +22,7 @@ func (s *SW) Write(n []byte) {
 }
 
 func (s *SW) GetSpeed() float64 {
-	return float64(s.bytes)/time.Since(s.startTime).Seconds()
+	return float64(s.bytes) / time.Since(s.startTime).Seconds()
 }
 func (s *SW) GetSpeedRound() int64 {
 	return int64(math.Round(s.GetSpeed()))
